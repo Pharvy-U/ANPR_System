@@ -14,4 +14,4 @@ This character recognition CNN is trained using an open-source alphanumeric data
 A web-based user interface is built with the Flask framework and setup for both monitoring the system and updating the database of vehicle owners and vehicle plate numbers.
 Please note that the time of designing this project, I had no knowledge of API's but I managed client-server connection using socket connection where the web-app is the server and the raspberry pi on the ground is the client.
 The database information can be edited from the web user interface.
-Also, please download and unzip the `yolo_custom_license_plate.rar` file from my drive [here](`https://drive.google.com/file/d/1AbooTH6YQbMndEbJlnlwecLtC06L_z4q/view?usp=sharing`), to get the custom weights and other files in the same location which are necessary for the program to run.
+Also, please download and unzip the `yolo_custom_license_plate.rar` file from my drive [here](https://drive.google.com/file/d/1AbooTH6YQbMndEbJlnlwecLtC06L_z4q/view?usp=sharing), to get the custom weights and other files in the same location which are necessary for the program to run.
