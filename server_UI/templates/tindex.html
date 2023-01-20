@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+{% extends 'tbase.html' %}
+{% include 'theader.html' %}
+
+
+
+
+{% block title %} Home {% endblock %}
+
+
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col md-12">
+
+            <div class="jumbotron p-3">
+
+                <h2>Vehicle License Plate  <b>Database </b>  <button type="button"  class="btn btn-success float-right"
+                data-toggle="modal" data-target="#mymodal">Add New Vehicle</button> </h2>
+
+
+                {% with messages = get_flashed_messages() %}
+
+                {% if messages %}
+
+                {% for message in messages %}
+
+                <div class="alert alert-success alert-dismissable" role="alert">
+
+                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+
+                        <span aria-hidden="true">x</span>
+
+                    </button>
+
+
+                {{message}}
+
+
+                </div>
+
+
+                {% endfor %}
+
+                {% endif %}
+                {% endwith %}
+
+
+                <table class="table table-hover table-dark">
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>VEHICLE MODEL</th>
+                        <th>PLATE NUMBER</th>
+                        <th>Action</th>
+
+                    </tr>
+
+
+                   {% for row in Lisence %}
+                    <tr>
+                        <td>{{row.id}}</td>
+                        <td>{{row.name}}</td>
+                        <td>{{row.Model}}</td>
+                        <td>{{row.plate}}</td>
+
+                        <td>
+                            <a href="/update/{{row.id}}" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit{{row.id}}">Edit</a>
+                            <a href="/delete/{{row.id}}" class="btn btn-danger btn-xs" onclick="return confirm('Are You Sure To Delete ?')">Delete</a>
+
+
+                        </td>
+
+                    </tr>
+
+
+                  <!-- Modal Edit Employee-->
+<div id="modaledit{{row.id}}" class="modal fade" role="dialog">
+   <div class="modal-dialog">
+
+
+      <div class="modal-content">
+
+
+         <div class="modal-header">
+
+
+            <h4 class="modal-title">Update Information</h4>
+
+
+         </div>
+
+
+         <div class="modal-body">
+
+
+            <form action="{{url_for('update')}}" method="POST">
+
+
+               <div class="form-group">
+
+
+                  <label>NAME:</label>
+                   <input type="hidden"  name="id" value="{{row.id}}">
+
+                  <input type="text" class="form-control" name="name" value="{{row.name}}">
+
+
+               </div>
+
+
+
+               <div class="form-group">
+
+
+                  <label>VEHICLE MODEL:</label>
+
+                  <input type="text" class="form-control" name="Model" value="{{row.Model}}">
+
+
+               </div>
+
+
+               <div class="form-group">
+
+
+                  <label>PLATE NUMBER:</label>
+
+                  <input type="text" class="form-control" name="plate" value="{{row.plate}}">
+
+
+               </div>
+
+
+               <div class="form-group">
+
+
+                  <button class="btn btn-primary" type="submit">Update</button>
+
+
+               </div>
+
+
+            </form>
+
+
+         </div>
+
+
+         <div class="modal-footer">
+
+
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+
+         </div>
+
+
+      </div>
+
+
+   </div>
+
+</div>
+
+
+                    {% endfor %}
+
+
+                </table>
+
+
+            </div>
+
+
+
+                  <!-- Modal Add Employee-->
+
+
+<div id="mymodal" class="modal fade" role="dialog">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+
+            <h4 class="modal-title">Add Vehicle Details</h4>
+         </div>
+         <div class="modal-body">
+
+            <form action="{{url_for('insert')}}" method="POST">
+
+
+               <div class="form-group">
+
+                  <label>NAME:</label>
+                  <input type="text" class="form-control" name="name" required="1">
+
+
+               </div>
+
+
+                <div class="form-group">
+
+
+                  <label>VEHICLE MODEL:</label>
+                  <input type="text" class="form-control" name="Model" required="1">
+
+
+               </div>
+
+
+                <div class="form-group">
+
+
+                  <label>PLATE NUMBER:</label>
+                  <input type="text" class="form-control" name="plate" required="1">
+
+
+               </div>
+
+
+
+               <div class="form-group">
+
+
+                  <button class="btn btn-primary" type="submit">Add Vehicle</button>
+
+
+               </div>
+
+
+            </form>
+
+
+         </div>
+
+
+         <div class="modal-footer">
+
+
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+
+         </div>
+
+
+      </div>
+
+
+   </div>
+
+
+</div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+</div>
+<a href="home"> Click here to go to the Home page</a>
+
+{% endblock %}
+
+

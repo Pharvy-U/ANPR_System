@@ -1,0 +1,33 @@
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(toll.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+	text-align: left;
+     color: white;
+		}
+		
+	h2 {text-align:center;
+      color: white}
+    img {text-align:center}
+	  
+a { background-color: green;
+        color:whitesmoke ;}
+.gal{
+     position: center;
+
+}
+.fun{ position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);}
+.vid{
+       position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+     }
+	
+	  
+	  

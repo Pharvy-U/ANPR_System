@@ -1,0 +1,34 @@
+
+<!doctype html>
+<html>
+
+<head>
+
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toll gate License plate </title>
+    <link rel="stylesheet" type="text/css" href="static/css/services.css">
+
+</head>
+
+<body>
+<div class = "gal">
+            <h2> Toll gate license plate Gallery Display</h2>
+                <p>Gallery of plate Numbers</p>
+            <h2> Live Streaming of the video</h2>
+</div>
+<div class = "vid">
+    <img src = "{{ url_for('video') }}" width="60%"/>
+
+    <img src = "{{ url_for('video2') }}" width="40%"/>
+
+
+                <br>
+                <a href="rand"> Click here to view vehicle details</a> <br> <br>
+                <a href="home"> Click here to go to the Home page</a>
+</div>
+
+</body>
+</html>
+

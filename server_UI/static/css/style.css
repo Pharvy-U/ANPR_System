@@ -1,0 +1,80 @@
+*{
+    margin:0%;
+    padding:0%;
+    font-family: cambria;
+    }
+    
+    header{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(plate_number.jpg);
+        height: 90vh;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    ul{
+        list-style-type: none;
+        float: right;
+        margin-top: 20px;
+        margin-right:20px;
+    }
+    ul li{
+        display: inline-block;
+    }
+    ul li a{
+        color: white;
+        text-decoration: none;
+        padding: 5px 20px;
+        
+        /*border: 1px solid rgb(255, 255, 255);*/
+        border: 1px transparent;
+        transition: 0.2s ease-in-out;
+    }
+    ul li a:hover{
+        background-color: crimson; 
+        color:rgb(255, 255, 255);
+    }
+    ul li.home a{
+        background-color: crimson;
+        color:rgb(255, 255, 255);
+    }
+    ul li.about a{
+        background-color: green;
+        color:whitesmoke ;
+    }
+    .logo img{
+        float: left;
+        width: 100px;
+        height: auto; 
+    }
+    .main{
+        max-width: 1500px;
+        margin:auto;
+    }
+    .title{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .title h1{
+        color:#fff;
+        font-size: 30px;
+    }
+    .button{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .btn{
+        border:1px solid #fff;
+        padding: 10px 30px;
+        color: #fff;
+        text-decoration: none;
+        transition: 0.6s ease-in;
+    }
+    .btn:hover{
+        background-color: brown;
+        color: #000;
+    }
+    

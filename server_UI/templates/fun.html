@@ -1,0 +1,22 @@
+
+
+</div>
+
+    <div id="fun" class="fun">
+
+
+                {% if oneitem %}
+
+                <h2>
+                    <p> Plate Number: {{oneitem.plate}} <br> Owner: {{oneitem.name}} <br> Vehicle Model: {{oneitem.Model}}<br> Status: REGISTERED </p>
+                </h2>
+
+                <h2> ACCESS GRANTED </h2><br>
+                {% else %}
+                <h2>Plate Number: {{ plating }}</h2>
+                <h2> Status: NOT REGISTERED </h2>
+                <h2>ACCESS DENIED</h2>
+
+                {% endif %}
+        <a href="gallery"> Click here to view live video feed</a>
+    </div>

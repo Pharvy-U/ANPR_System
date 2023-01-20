@@ -1,0 +1,6 @@
+__pycache__
+venv
+.DS_Store
+raspberry_pi(client)/coco_custom.names
+raspberry_pi(client)/custom.weights
+raspberry_pi(client)/yolov4-custom.cfg
